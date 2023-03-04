@@ -23,25 +23,16 @@ public static class ConfigHelpers
         .AddEnvironmentVariables()
         .Build();
 
-
-
         _token = cfg.GetValue<string>("JIRA_TOKEN")?.ToString();
         _db_url = cfg.GetValue<string>("DATABASE_URL")?.ToString();
-   
-
-
-        //Config =  (ConfigurationBuilder) cfg;
-
     }
 
     public static string GetJIRAToken() {
-        //var dbUrl = config.GetValue<string>("DATABASE_URL");
         if (_token == "") LoadEnviromentVariables();
         return _token;
     }
 
     public static string GetDB_URL() {
-        //var dbUrl = config.GetValue<string>("DATABASE_URL");
         if (_db_url == "") LoadEnviromentVariables();
         return _db_url;
     }
