@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spinnaker.web", "spinnaker.web\spinnaker.web.csproj", "{EEB8D4AA-2385-4A01-8EE1-423DE2C3FFCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spinnaker.business", "spinnaker.business\spinnaker.business.csproj", "{5C443B3C-5729-40FF-A912-457964B0BB4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spinnaker.common", "spinnaker.common\spinnaker.common.csproj", "{C9962588-57CC-4D4A-95E0-0AED1222969B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEB8D4AA-2385-4A01-8EE1-423DE2C3FFCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB8D4AA-2385-4A01-8EE1-423DE2C3FFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB8D4AA-2385-4A01-8EE1-423DE2C3FFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB8D4AA-2385-4A01-8EE1-423DE2C3FFCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C443B3C-5729-40FF-A912-457964B0BB4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C443B3C-5729-40FF-A912-457964B0BB4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C443B3C-5729-40FF-A912-457964B0BB4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C443B3C-5729-40FF-A912-457964B0BB4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9962588-57CC-4D4A-95E0-0AED1222969B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9962588-57CC-4D4A-95E0-0AED1222969B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9962588-57CC-4D4A-95E0-0AED1222969B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9962588-57CC-4D4A-95E0-0AED1222969B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
