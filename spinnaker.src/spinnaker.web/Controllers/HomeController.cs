@@ -1,7 +1,9 @@
 ﻿using System.Diagnostics;
+using System.Net.Http.Headers;
 using Microsoft.AspNetCore.Mvc;
-using rudder.web.Models;
-using rudder.common;
+using spinnaker.common;
+using spinnaker.web.Models;
+using RestSharp;
 
 namespace rudder.web.Controllers;
 
@@ -14,18 +16,32 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public  IActionResult IndexAsync()
     {
-        var dbUrl = ConfigHelpers.GetDB_URL();
-        var token = ConfigHelpers.GetJIRAToken();
+        Boards boards = getBoards(); //get values from REST API EndPoint instead of calling directly business - this is CLIENT!
 
-        Debug.Print("dbUrl: " + dbUrl);
-        Debug.Print("token: " + token);
+        ViewBag.Boards = boards;
 
-        ViewBag.DBUrl = dbUrl;
-        ViewBag.Token = token;
 
         return View();
+    }
+
+    //This is for testing purposes for now only
+    static Boards getBoards()
+    {
+        Boards? result = null;
+
+        var client = new RestClient("http://localhost:5134");
+        var request = new RestRequest("/api/boards", Method.Get);
+
+        var test = client.Execute<Boards>(request);
+
+        if (test.IsSuccessful)
+        {
+            result = test.Data;
+        }
+
+        return result;
     }
 
     public IActionResult Privacy()

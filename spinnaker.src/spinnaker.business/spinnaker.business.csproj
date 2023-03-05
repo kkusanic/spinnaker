@@ -8,6 +8,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\spinnaker.common\spinnaker.common.csproj" />
+    <ProjectReference Include="..\spinnaker.postman\spinnaker.postman.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
 </Project>

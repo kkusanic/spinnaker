@@ -2,6 +2,7 @@ services:
   web:
     build: .
     environment:
+      - JIRA_INSTANCE=https://ellisdon-jira.atlassian.net/
       - JIRA_TOKEN=<YAML:add ENV variable with your jira token>
       - DATABASE_URL=<YAML:add ENV variable with DB string>
     ports:

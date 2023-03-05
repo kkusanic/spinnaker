@@ -1,4 +1,4 @@
-namespace rudder.web.Models;
+namespace spinnaker.web.Models;
 
 public class ErrorViewModel
 {
