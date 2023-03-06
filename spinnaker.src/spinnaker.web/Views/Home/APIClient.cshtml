@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "REST API Client Test";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+    <p>&nbsp;</p>
+    <table style="border: 1px solid #cccccc">
+    @foreach (var item in ViewBag.Boards)
+    {
+        <tr>
+            <td><a href="@item.BoardURL">[link]</a></td>
+            <td>@item.BoardName</td>
+            <td>@item.BoardType</td>
+            <td>@item.ProjectKey</td>
+        </tr>
+        
+    }
+    </table>

@@ -18,13 +18,22 @@ public class HomeController : Controller
 
     public  IActionResult IndexAsync()
     {
+        return View();
+    }
+
+
+        public IActionResult APIClient()
+    {
         Boards boards = getBoards(); //get values from REST API EndPoint instead of calling directly business - this is CLIENT!
 
         ViewBag.Boards = boards;
 
-
         return View();
     }
+
+
+
+
 
     //This is for testing purposes for now only
     static Boards getBoards()
@@ -44,10 +53,10 @@ public class HomeController : Controller
         return result;
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
+
+
+
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

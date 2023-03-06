@@ -25,20 +25,5 @@ namespace spinnaker.web.Controllers
             return new JsonResult(boards);
         }
         
-
-        /*
-        [HttpGet]
-        public HttpResponseMessage Get(string projectKey) {
-            Boards boards = spinnaker.business.ReportEngine.GetBoards();
-            
-            // Return the data as a JSON array in the HTTP response
-            string json = JsonConvert.SerializeObject(boards);
-
-            
-            HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
-            response.Content = new StringContent(json, Encoding.UTF8, "application/json");
-            return response;
-        }
-        */
     }
 }
