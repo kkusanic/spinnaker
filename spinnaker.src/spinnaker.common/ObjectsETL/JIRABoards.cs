@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 namespace spinnaker.common
 {
 
-    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
     public class Location
     {
         public int projectId { get; set; }
@@ -34,7 +33,7 @@ namespace spinnaker.common
         public string? self { get; set; }
         public string? name { get; set; }
         public string? type { get; set; }
-        public Location location { get; set; }
+        public Location location { get; set; } = null!;
     }
 
 }

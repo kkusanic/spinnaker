@@ -7,8 +7,11 @@ using spinnaker.common;
 public class JIRAConnector
 {
 
-    public string GetBoardsByProjectKey(string projectKey) {
-        string apiCall = string.Format("{0}?projectKeyOrId={1}", JIRA_RESTAPI.API_BOARDS, projectKey);
+    public string GetAllBoards(int startAt = 0, int maxResults = 50) {
+
+        string apiCall = string.Format("{0}?startAt={1}&maxResults={2}", 
+                                    JIRA_RESTAPI.API_BOARDS, startAt, maxResults);
+
         var res = getJiraJSONResponse(apiCall);
 
         return res;

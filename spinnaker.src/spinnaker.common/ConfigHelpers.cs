@@ -1,4 +1,5 @@
-﻿namespace spinnaker.common;
+﻿#nullable disable
+namespace spinnaker.common;
 
 using Microsoft.Extensions.Configuration;
 using System;
@@ -9,6 +10,9 @@ using System.IO;
 
 public static class ConfigHelpers
 {
+
+    public static int JIRA_MAX_RESULTS = 50; //max records in JSON response (default is 50)
+
     static string _jira_instance = "";
     static string _jira_token  = "";
     static string _db_url = "";

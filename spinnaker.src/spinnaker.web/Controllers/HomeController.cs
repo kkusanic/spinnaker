@@ -53,10 +53,15 @@ public class HomeController : Controller
         return result;
     }
 
+/*
+    static string getLocalURL() {
 
+        Uri uri = Request.Url;
+        string requested = uri.Scheme + Uri.SchemeDelimiter + uri.Host + ":" + uri.Port;
 
-
-
+        return requested;
+    }
+*/
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
