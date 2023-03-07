@@ -45,9 +45,11 @@ public class HomeController : Controller
 
         var test = client.Execute<Boards>(request);
 
-        if (test.IsSuccessful)
-        {
-            result = test.Data;
+        if (test.IsSuccessful) {
+            result = (test.Data == null) ? new Boards() : test.Data;
+        }
+        else {
+            result = new Boards();
         }
 
         return result;

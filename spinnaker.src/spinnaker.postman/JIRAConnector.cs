@@ -27,7 +27,7 @@ public class JIRAConnector
         string apiEndpoint = string.Format("{0}{1}", instance, api_request);
 
         using (WebClient client = new WebClient()){
-
+            
             client.Headers[HttpRequestHeader.Authorization] = string.Format("Basic {0}", token);
             result = client.DownloadString(apiEndpoint);
 
