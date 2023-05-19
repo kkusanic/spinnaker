@@ -38,7 +38,7 @@ public class HomeController : Controller
     //This is for testing purposes for now only
     static Boards getBoards()
     {
-        Boards? result = null;
+        Boards result = null;
 
         var client = new RestClient("http://localhost:5134");
         var request = new RestRequest("/api/boards", Method.Get);
