@@ -1,5 +1,4 @@
-﻿#nullable disable
-namespace spinnaker.common;
+﻿namespace spinnaker.common;
 
 using Microsoft.Extensions.Configuration;
 using System;

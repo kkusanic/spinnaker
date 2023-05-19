@@ -8,7 +8,7 @@ public class ReportEngine
     public static Boards GetBoards() {
         JIRAConnector jira = new JIRAConnector();
 
-        JIRABoards? fetchedBoards;
+        JIRABoards fetchedBoards;
         Boards allBoards = new Boards();
                 
         string json = "";
